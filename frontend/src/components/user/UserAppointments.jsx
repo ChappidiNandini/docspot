@@ -48,7 +48,7 @@ const UserAppointments = () => {
   const getDoctorAppointment = async () => {
     console.log(userid)
     try {
-      const res = await axios.get('http://localhost:5000/api/doctor/getdoctorappointments', {
+      const res = await axios.get('https://doctor-appointment-1-kzhm.onrender.com/api/doctor/getdoctorappointments', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -68,7 +68,7 @@ const UserAppointments = () => {
 
   const handleStatus = async (userid, appointmentId, status) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/doctor/handlestatus', {
+      const res = await axios.post('https://doctor-appointment-1-kzhm.onrender.com/api/doctor/handlestatus', {
         userid,
         appointmentId,
         status,
@@ -103,7 +103,7 @@ const UserAppointments = () => {
 
   const handleDownload = async (url, appointId) => {
     try {
-      const res = await axios.get('http://localhost:5000/api/doctor/getdocumentdownload', {
+      const res = await axios.get('https://doctor-appointment-1-kzhm.onrender.com/api/doctor/getdocumentdownload', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem("token")}`,
         },
