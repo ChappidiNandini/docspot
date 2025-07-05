@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: online-doctor-app
+    env: node
+    buildCommand: |
+      cd frontend && npm install && npm run build
+      cd ../backend && npm install
+    startCommand: cd backend && node index.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://gattichanikya123:<db_password>@cluster0.fuxcqr3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_KEY
+        value: your_secret_key_here
+      - key: PORT
+        value: 10000 # Render will set process.env.PORT
+    plan: free
