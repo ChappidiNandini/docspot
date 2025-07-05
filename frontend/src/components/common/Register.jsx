@@ -33,7 +33,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:5000/api/user/register', user)
+      const res = await axios.post('https://doctor-appointment-1-kzhm.onrender.com/api/user/register', user)
       if (res.data.success) {
         message.success('Registered Successfully')
         navigate('/login')
