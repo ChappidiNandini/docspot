@@ -26,7 +26,7 @@ const UserAppointments = () => {
   const getUserAppointment = async () => {
     console.log(userid)
     try {
-      const res = await axios.get('http://localhost:5000/api/user/getuserappointments', {
+      const res = await axios.get('https://doctor-appointment-1-kzhm.onrender.com/api/user/getuserappointments', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
