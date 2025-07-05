@@ -10,7 +10,7 @@ const AdminAppointments = () => {
 
    const getAppointments = async () => {
       try {
-         const res = await axios.get('http://localhost:5000/api/admin/getallAppointmentsAdmin', {
+         const res = await axios.get('https://doctor-appointment-1-kzhm.onrender.com/api/admin/getallAppointmentsAdmin', {
             headers: {
                Authorization: `Bearer ${localStorage.getItem('token')}`
             },
