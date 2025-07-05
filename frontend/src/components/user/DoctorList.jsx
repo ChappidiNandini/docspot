@@ -41,7 +41,7 @@ const DoctorList = ({ userDoctorId, doctor, userdata }) => {
          formData.append('userInfo', JSON.stringify(userdata));
          formData.append('doctorInfo', JSON.stringify(doctor));
 
-         const res = await axios.post('http://localhost:5000/api/user/getappointment', formData, {
+         const res = await axios.post('https://doctor-appointment-1-kzhm.onrender.com/api/user/getappointment', formData, {
             headers: {
                Authorization: `Bearer ${localStorage.getItem("token")}`,
                'Content-Type': 'multipart/form-data',
