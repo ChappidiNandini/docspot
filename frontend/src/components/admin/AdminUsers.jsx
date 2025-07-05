@@ -10,7 +10,7 @@ const AdminUsers = () => {
 
    const getUsers = async()=>{
       try {
-         const res = await axios.get('http://localhost:5000/api/admin/getallusers', {
+         const res = await axios.get('https://doctor-appointment-1-kzhm.onrender.com/api/admin/getallusers', {
             headers: {
                Authorization : `Bearer ${localStorage.getItem("token")}`,
             },
