@@ -18,7 +18,7 @@ const AdminHome = () => {
 
    const getUserData = async () => {
       try {
-         await axios.post('http://localhost:5000/api/user/getuserdata', {}, {
+         await axios.post('https://doctor-appointment-1-kzhm.onrender.com/api/user/getuserdata', {}, {
             headers: {
                Authorization: "Bearer " + localStorage.getItem('token')
             },
